@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-logoap',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./logoap.component.css']
 })
 export class LogoapComponent {
-
+  constructor(private router:Router){ }
+  
+  login(){
+    this.router.navigate(['/login'])
+  }
 }

@@ -1,0 +1,22 @@
+.carta{
+    padding:20px;
+    padding-right: 10%;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+div{
+    background-color: rgba(255, 242, 0, 0.128);
+    border-radius: 20px;
+    padding-top: 1%;
+    margin: 3%;
+    justify-content: center;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+.educacion{
+    padding-top: 1%;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
