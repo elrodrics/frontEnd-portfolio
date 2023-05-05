@@ -15,7 +15,9 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { IdiomasComponent } from './components/idiomas/idiomas.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from  '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from  '@angular/common/http';
+import { PortfolioService } from './services/portfolio.service';
+import { InterceptorService } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { HttpClientModule } from  '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [PortfolioService,
+  { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
