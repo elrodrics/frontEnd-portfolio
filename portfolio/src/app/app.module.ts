@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -14,6 +14,8 @@ import { LoginComponent } from './components/login/login.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { IdiomasComponent } from './components/idiomas/idiomas.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({}),
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

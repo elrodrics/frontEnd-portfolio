@@ -1,0 +1,104 @@
+div{
+    margin-right: 0%;
+}
+
+.row{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+#logoAP{
+    width: 150px;
+}
+
+img{
+    width: 50px;
+    margin-right: 10pt;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.log{
+    padding-top: 1%;
+    transition: transform .2s;
+}
+
+.log:hover{
+    transform:scale(0.95);
+}
+
+.bton{
+    display: flex;
+}
+
+.zoom{
+  transition: transform .2s; /* Animacion */
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+/*--- Vista del celular ---*/
+
+@media(max-width: 575px){ 
+    .container{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+    
+    .redes img{
+        margin: 0.2em;
+    }
+    .bton{
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+.btn{  
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition : all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #161103;
+  color: #ffffff;
+}
+.btn:active,
+.btn:focus{  
+    background-color: #f09f25;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+.btn:hover{  
+  background-color: #f09f25;
+  color: #000000;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+  transform:scale(1.04);
+}

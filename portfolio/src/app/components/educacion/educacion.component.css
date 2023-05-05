@@ -1,8 +1,7 @@
-.carta{
+.educacion{
     padding:20px;
     padding-right: 10%;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
+    margin-right: 3%;
 }
 
 div{
@@ -10,13 +9,11 @@ div{
     border-radius: 20px;
     padding-top: 1%;
     margin: 3%;
+    padding-bottom: 3%;
     justify-content: center;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
 }
 
-.educacion{
+.carta{
     padding-top: 1%;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
+    margin: 0%;
 }

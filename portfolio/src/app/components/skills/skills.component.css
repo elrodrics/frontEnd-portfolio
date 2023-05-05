@@ -1,0 +1,20 @@
+div{
+    background-color: rgba(255, 242, 0, 0.128);
+    border-radius: 20px;
+    padding-top: 1%;
+    margin: 3%;
+    padding-bottom: 3%;
+    justify-content: center;
+}
+
+.row{
+    padding:20px;
+    padding-right: 5%;
+    margin-right: 3%;
+}
+
+
+.skills{
+    padding-top: 1%;
+    margin: 0%;
+}
