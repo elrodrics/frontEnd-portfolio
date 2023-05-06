@@ -17,3 +17,26 @@ div{
     padding-top: 1%;
     margin: 0%;
 }
+
+h2{
+    margin-top: 5%;
+}
+
+p{
+    padding-top: 1%;
+}
+
+#escuela{
+    padding-top: 1%;
+    width: 150px;
+    border-radius: 13%;
+    margin-right: 2%;
+    margin-bottom: 5%;
+}
+
+#seprogramar{
+    padding-top: 1%;
+    width: 250px;
+    border-radius: 2%;
+    margin-right: 2%;
+}

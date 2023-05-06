@@ -1,4 +1,4 @@
-.idiomas{
+.row{
     padding:20px;
     padding-right: 10%;
     margin-right: 3%;
@@ -16,4 +16,19 @@ div{
 .carta{
     padding-top: 1%;
     margin: 0%;
+}
+
+img{
+    width: 200px;
+    border-radius: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+h2{
+    margin-top: 5%;
+}
+
+p{
+    padding-top: 1%;
 }

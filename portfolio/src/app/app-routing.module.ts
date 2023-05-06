@@ -5,7 +5,7 @@ import { LoginComponent } from './components/login/login.component';
 import { guardGuard } from './services/guard.guard';
 
 const routes: Routes = [
-  {path:'home', component: HomeComponent, canActivate:[guardGuard]},
+  {path:'home', component: HomeComponent },
   {path:'login', component: LoginComponent},
   {path:'',redirectTo:'login',pathMatch:'full'}
 ];
