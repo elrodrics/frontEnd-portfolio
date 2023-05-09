@@ -1,5 +1,5 @@
 div{
-    background-color: rgba(255, 242, 0, 0.128);
+    background-color: rgba(63, 0, 94, 0.183);
     border-radius: 20px;
     padding-top: 1%;
     margin: 3%;
@@ -17,6 +17,10 @@ div{
 .skills{
     padding-top: 1%;
     margin: 0%;
+}
+
+#skil{
+    display: flex;
 }
 
 h2{

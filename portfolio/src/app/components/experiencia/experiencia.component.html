@@ -1,15 +1,27 @@
 <div class="carta">
-    <div class="row">
+    <div class="experiencia">
+
+        <a class="btn btn-secondary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Delete"
+        id="cruz" style="float: right"><i class="fa fa-times"></i></a>
+        <a class="btn btn-primary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Edit"
+        id="lapiz" style="float: right"><i class="fa fa-pencil"></i></a>
+        
         <h1>Experiencia</h1>
-            <div class="col-lg-11">
+            <div *ngFor="let experiencia of experiencias" >
+                <img src="{{experiencia.imagenExp}}" style="float: right">
                     <ul>
-                        <img src="../../../assets/mcdonalds.jpg" style="float: right">
                         <li>
-                        <h2>McDonald's</h2> <h4>Cajero (2022 - 2023) </h4>
+                        <h2>{{experiencia.tituloExp}}</h2> <h4>{{experiencia.subtituloExp}} ({{experiencia.fechaExp}} - {{experiencia.fechaFinExp}}) </h4>
                         </li>
                         
                         <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda ducimus nesciunt voluptatem id eligendi sit est fugiat sequi recusandae, quis praesentium corporis quo. Inventore, repudiandae. Dolores, illum. Praesentium, perspiciatis iste!
+                            {{experiencia.descExp}}
                         </p>
                     </ul>
             </div>

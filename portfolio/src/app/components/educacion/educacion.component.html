@@ -1,30 +1,32 @@
-<div class="carta" data-aos="fade-left">
+<div class="carta">
     <div class="educacion">
+        
+        <a class="btn btn-secondary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Delete"
+            id="cruz" style="float: right"><i class="fa fa-times"></i></a>
+        <a class="btn btn-primary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Edit"
+            id="lapiz" style="float: right"><i class="fa fa-pencil"></i></a>
+            
         <h1>Educacion</h1>
-        <div>
+        <div *ngFor="let educacion of educaciones" >
+            
             <ul>
-                <img src="../../../assets/escuela.jpg" id="escuela" style="float: right">
+                <img src="{{educacion.imagenEdu}}" id="escuela" style="float: right">
                 <li>
-                <h2>Secundario completo</h2> <h4>Instituto Republica Argentina (2017 - 2022) </h4>
+                <h2>{{educacion.tituloEdu}}</h2> <h4>{{educacion.subtituloEdu}} ({{educacion.fechaEdu}} - {{educacion.fechaFinEdu}}) </h4>
                 </li>
                 
                 <p>
-                    Finalicé mis estudios de nivel secundario en el Instituto Republica Argentina, con bachiller en administracion en empresas.
+                    {{educacion.descEdu}}
                 </p>
-                <br>
-                <br>
-                <img src="../../../assets/seprogramar.jpg" id="seprogramar" style="float: right">
-                <li>
-                <h2>Curso #SeProgramar</h2> <h4>Argentina programa  (2021 - 2022)</h4>
-                </li>
-                
-                <p>
-                    Curso de introducción a la programación trabajando con lenguajes JavaScript y Ruby.
-                </p>
-
-                
-
+             
             </ul>
+            
         </div>
     </div>
 </div>

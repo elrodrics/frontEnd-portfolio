@@ -14,9 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS, HttpClientModule } from  '@angular/common/http';
-import { PortfolioService } from './services/portfolio.service';
-import { InterceptorService } from './services/interceptor.service';
+import { HttpClientModule } from  '@angular/common/http';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 
 @NgModule({
@@ -41,8 +39,7 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [PortfolioService,
-  { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true }
+  providers: [
   ],
   bootstrap: [AppComponent]
 })

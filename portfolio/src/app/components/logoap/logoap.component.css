@@ -11,6 +11,7 @@ div{
     width: 150px;
 }
 
+
 img{
     width: 50px;
     margin-right: 10pt;
@@ -41,6 +42,37 @@ img{
 .zoom:hover {
     transform: scale(1.1);
 }
+
+#linkedin:hover{
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.305);
+    background-size: 1%;
+}
+
+#twitter:hover{
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.305);
+    background-size: 1%;
+}
+
+#instagram:hover{
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.305);
+    background-size: 1%;
+}
+
+#github:hover{
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.305);
+    background-size: 1%;
+}
+
+#facebook:hover{
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.305);
+    background-size: 1%;
+}
+
 
 /*--- Vista del celular ---*/
 
@@ -92,13 +124,13 @@ img{
 }
 .btn:active,
 .btn:focus{  
-    background-color: #f09f25;
-  color: #ffeba7;
+    background-color: #5404ff;
+  color: #f0f0f0;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 .btn:hover{  
-  background-color: #f09f25;
-  color: #000000;
+  background-color: #ffffff;
+  color: #0f0131;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   transform:scale(1.04);
 }

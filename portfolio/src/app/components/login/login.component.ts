@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AutenticationService } from 'src/app/services/autentication.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +9,7 @@ import { AutenticationService } from 'src/app/services/autentication.service';
 })
 export class LoginComponent {
   form:FormGroup;
-  constructor(private formBuilder:FormBuilder, private autenticationService:AutenticationService, private ruta:Router){
+  constructor(private formBuilder:FormBuilder, private ruta:Router){
     this.form=this.formBuilder.group(
       {
         email:['',[Validators.required,Validators.email]],
@@ -26,13 +25,7 @@ export class LoginComponent {
         return this.form.get('password');
       }
 
-      onEnviar(event:Event){
-        event.preventDefault;
-        this.autenticationService.IniciarSesion(this.form.value).subscribe(data=>{
-          console.log("DATA:" + JSON.stringify(data));
-          this.ruta.navigate(['/portfolio']);
-        })
-      }
+     
   }
 
 
