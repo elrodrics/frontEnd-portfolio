@@ -12,47 +12,35 @@
                     <img src="../../../assets/APLogo.png"
                       style="width: 185px;" alt="logo">
                     <h2 class="mt-1 mb-5 pb-1">Iniciar sesión</h2>
+                    <p>Ingresa tu direccion email y contraseña</p>
                   </div>
   
-                  <form [formGroup]="form">
-                    <p>Ingresa tu direccion email y contraseña</p>
-  
-                    <div class="form-outline mb-4">
-                      <input type="email" formControlName="email" id="form2Example11" class="form-control"
-                        placeholder="Correo electrónico o usuario" />
-                        <div *ngIf="Email?.errors && Email?.touched">
-                            <p *ngIf="Email?.hasError('required')" class="text-danger">
-                                El email es requerido.
-                            </p>
-                            <p *ngIf="Email?.hasError('email')" class="text-danger">
-                                El formato del email debe ser válido.
-                            </p>
-                        </div>
+                  <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+                    <div class="form-outline form-white mb-2">
+                      <input type="email" id="nombreUserUsuario" name="nombreUserUsuario" class="form-control form-control-lg"
+                        [(ngModel)]="nombreUserUsuario" required />
+                      <label class="form-label" for="nombreUserUsuario">Usuario</label>
                     </div>
   
-                    <div class="form-outline mb-4">
-                      <input type="password" formControlName="password" id="form2Example22 "class="form-control"  placeholder="Contraseña" />
-                        <div *ngIf="Password?.errors && Password?.touched">
-                            <p *ngIf="Password?.hasError('required')" class="text-danger">
-                                La contraseña es requerida.
-                            </p>
-                            <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
-                                La contraseña debe ser de 8 o más caracteres.
-                            </p>
-                        </div>
+                    <div class="form-outline form-white mb-1">
+                      <input type="password" id="password" name="password" class="form-control form-control-lg"
+                        [(ngModel)]="password" required />
+                      <label class="form-label" for="password">Password</label>
                     </div>
 
                     <div class="text-center pt-1 mb-5 pb-1">
-                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button">Log
+                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" type="submit" id="login">Log
                         in</button>
                     </div>
+                  </form>
+                    
   
                     <div class="d-flex align-items-center justify-content-center pb-4">
                       <p class="mb-0 me-2">¿No tienes cuenta?</p>
-                      <button type="button" class="btn btn-outline-danger">Crear cuenta</button>
+                      <button type="button" class="btn btn-outline-danger" id="crearcuenta">Crear cuenta</button>
                     </div>
   
-                  </form>
+                  
   
                 </div>
               </div>

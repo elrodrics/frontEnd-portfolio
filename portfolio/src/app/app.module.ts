@@ -13,9 +13,10 @@ import { EducacionComponent } from './components/educacion/educacion.component';
 import { LoginComponent } from './components/login/login.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { interceptorProvider } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +38,11 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [
+    interceptorProvider
   ],
   bootstrap: [AppComponent]
 })

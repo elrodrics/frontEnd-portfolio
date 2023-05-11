@@ -1,5 +1,6 @@
+
 div{
-    background-color: rgba(63, 0, 94, 0.183);
+    background-color: rgba(63, 0, 94, 0.153);
     border-radius: 20px;
     padding-top: 1%;
     margin: 3%;
@@ -7,21 +8,19 @@ div{
     justify-content: center;
 }
 
-.row{
+
+.skills{
     padding:20px;
     padding-right: 5%;
     margin-right: 3%;
+    
 }
 
-
-.skills{
+.carta{
     padding-top: 1%;
     margin: 0%;
 }
 
-#skil{
-    display: flex;
-}
 
 h2{
     margin-top: 5%;
@@ -29,4 +28,58 @@ h2{
 
 p{
     padding-top: 1%;
+}
+
+
+#lapiz{  
+    background-color: #00731ff4;
+    margin-left: 9px;
+    margin-top: 5px;
+    padding: 12px;
+}
+
+#cruz{
+    background-color: #730a0091;
+    margin-left: 9px;
+    margin-top: 5px;
+    padding: 14px;
+}
+.btn{
+    border-radius: 4px;
+    height: 44px;
+    -webkit-transition : all 200ms linear;
+    transition: all 200ms linear;
+    letter-spacing: 1px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    border: none;
+}
+.btn:active,
+.btn:focus{  
+    background-color: #ffffff;
+  color: #f0f0f0;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+#lapiz:hover{  
+    background-color: #ffffff;
+    color: #24b200;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+    transform:scale(1.04);
+}
+  
+#cruz:hover{  
+  background-color: #ffffff;
+  color: #c41515;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+  transform:scale(1.04);
 }

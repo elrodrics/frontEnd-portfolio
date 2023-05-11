@@ -26,8 +26,11 @@
                 </div>
 
                 <div class="log">
-                    <button type="button" class="btn btn-warning" (click)="login()">
+                    <button type="button" class="btn btn-warning" (click)="login()" *ngIf="!isLogged">
                         LOGIN
+                    </button>
+                    <button type="button" class="btn btn-warning" (click)="onLogOut()" *ngIf="isLogged">
+                        LOGOUT
                     </button>
                 </div>
             </div>

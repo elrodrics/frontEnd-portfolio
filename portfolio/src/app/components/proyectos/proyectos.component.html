@@ -1,14 +1,27 @@
 <div class="carta">
-    <div class="row">
+    <div class="proyectos">
+
+        <a class="btn btn-secondary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Delete"
+        id="cruz" style="float: right"><i class="fa fa-times"></i></a>
+        <a class="btn btn-primary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Edit"
+        id="lapiz" style="float: right"><i class="fa fa-pencil"></i></a>
+        
+
         <h1>Proyectos</h1>
-        <div class="col-lg-11">
+        <div *ngFor="let proyectos of proyectos" >
             <ul>
                 <li>
-                <h2>Portfolio web</h2> <h4>Proyecto final #YoProgramo (2022 - 2023) </h4>
+                <h2>{{proyectos.tituloProye}}</h2> <h4>{{proyectos.subtituloProye}} ({{proyectos.fechaProye}} - {{proyectos.fechaFinProye}}) </h4>
                 </li>
 
                 <p>
-                    Diseñe esta misma web como trabajo final para el curso de ArgentinaPrograma, en la cual emplee las distintas tecnlogias vistas, tales como: JavaScript, HTML, CSS, TypeScript, Java.
+                    {{proyectos.descProye}}
                 </p>
             </ul>
         </div>
