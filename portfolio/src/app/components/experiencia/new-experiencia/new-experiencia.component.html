@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row">
+      <div>
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="tituloExp">titulo</label>
+                  <input type="text" class="form-control" id="tituloExp" name="tituloExp" [(ngModel)]="tituloExp" required>
+              </div>
+              <div class="form-group">
+                  <label for="subtituloExp">subtitulo</label>
+                  <input type="text" class="form-control" id="subtituloExp" name="subtituloExp" [(ngModel)]="subtituloExp" required>
+              </div>
+              <div class="form-group">
+                <label for="fechaExp">fecha inicio</label>
+                <input type="text" class="form-control" id="fechaExp" name="fechaExp" [(ngModel)]="fechaExp" required>
+            </div>
+            <div class="form-group">
+              <label for="fechaFinExp">fecha fin</label>
+              <input type="text" class="form-control" id="fechaFinExp" name="fechaFinExp" [(ngModel)]="fechaFinExp" required>
+          </div>
+          <div class="form-group">
+            <label for="descExp">Descripcion de la tarea</label>
+            <input type="text" class="form-control" id="descExp" name="descExp" [(ngModel)]="descExp" required>
+        </div>
+          <div class="form-group">
+            <label for="imagenExp">imagen</label>
+            <input type="text" class="form-control" id="imagenExp" name="imagenExp" [(ngModel)]="imagenExp" required>
+        </div>
+              <button class="btn btn-primary">
+                  Agregar experiencia
+              </button>
+          </form>
+      </div>
+  </div>
+</div>
+

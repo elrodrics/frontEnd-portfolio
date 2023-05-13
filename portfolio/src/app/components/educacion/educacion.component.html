@@ -1,32 +1,45 @@
 <div class="carta">
-    <div class="educacion">
-        
+    <div class="educacion" >
+      <h1>Educación</h1>
+
+      <div *ngFor="let Educacion of educaciones">
         <a class="btn btn-secondary tooltips"
-            data-placement="top"
-            data-toggle="tooltip"
-            data-original-title="Delete"
-            id="cruz" style="float: right"><i class="fa fa-times"></i></a>
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Delete"
+        id="cruz" style="float: right"
+        *ngIf="isLogged"
+        (click)="delete(Educacion.idEdu)"><i class="fa fa-times"></i></a>
+
         <a class="btn btn-primary tooltips"
-            data-placement="top"
-            data-toggle="tooltip"
-            data-original-title="Edit"
-            id="lapiz" style="float: right"><i class="fa fa-pencil"></i></a>
-            
-        <h1>Educacion</h1>
-        <div *ngFor="let educacion of educaciones" >
-            
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Edit"
+        id="lapiz" style="float: right"
+        *ngIf="isLogged"
+        routerLink="/editedu/{{Educacion.idEdu}}"><i class="fa fa-pencil"></i></a>
+
+        <a class="btn btn-primary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Edit"
+        id="plus" style="float: right"
+        *ngIf="isLogged"
+        routerLink="/nuevaedu"><i class="fa-solid fa-plus"></i></a>
+
             <ul>
-                <img src="{{educacion.imagenEdu}}" id="escuela" style="float: right">
-                <li>
-                <h2>{{educacion.tituloEdu}}</h2> <h4>{{educacion.subtituloEdu}} ({{educacion.fechaEdu}} - {{educacion.fechaFinEdu}}) </h4>
-                </li>
                 
-                <p>
-                    {{educacion.descEdu}}
-                </p>
-             
+                <li>
+                  <h2>{{Educacion.tituloEdu}}</h2> 
+                  <img src="{{Educacion.imagenEdu}}" id="escuela" style="float: right">
+                  <h4>{{Educacion.subtituloEdu}} </h4>
+                  <h4>({{Educacion.fechaEdu}} - {{Educacion.fechaFinEdu}}) </h4>
+                  <p>
+                    {{Educacion.descEdu}}
+                  </p>
+                </li>
             </ul>
-            
         </div>
-    </div>
-</div>
+     </div>
+  </div>
+  

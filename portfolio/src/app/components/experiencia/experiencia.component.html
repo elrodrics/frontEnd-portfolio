@@ -1,27 +1,41 @@
 <div class="carta">
     <div class="experiencia">
-
-        <a class="btn btn-secondary tooltips"
-        data-placement="top"
-        data-toggle="tooltip"
-        data-original-title="Delete"
-        id="cruz" style="float: right"><i class="fa fa-times"></i></a>
-        <a class="btn btn-primary tooltips"
-        data-placement="top"
-        data-toggle="tooltip"
-        data-original-title="Edit"
-        id="lapiz" style="float: right"><i class="fa fa-pencil"></i></a>
-        
         <h1>Experiencia</h1>
-            <div *ngFor="let experiencia of experiencias" >
-                <img src="{{experiencia.imagenExp}}" style="float: right">
+            <div *ngFor="let Experiencia of experiencias" >
+                <a class="btn btn-secondary tooltips"
+                    data-placement="top"
+                    data-toggle="tooltip"
+                    data-original-title="Delete"
+                    id="cruz" style="float: right"
+                    *ngIf="isLogged"
+                    (click)="delete(Experiencia.idExp)"><i class="fa fa-times"></i></a>
+
+                    <a class="btn btn-primary tooltips"
+                    data-placement="top"
+                    data-toggle="tooltip"
+                    data-original-title="Edit"
+                    id="lapiz" style="float: right"
+                    *ngIf="isLogged"
+                    routerLink="/editexp/{{Experiencia.idExp}}"><i class="fa fa-pencil"></i></a>
+
+                    <a class="btn btn-primary tooltips"
+                    data-placement="top"
+                    data-toggle="tooltip"
+                    data-original-title="Edit"
+                    id="plus" style="float: right"
+                    *ngIf="isLogged"
+                    routerLink="/nuevaexp"><i class="fa-solid fa-plus"></i></a>
+
+                
                     <ul>
                         <li>
-                        <h2>{{experiencia.tituloExp}}</h2> <h4>{{experiencia.subtituloExp}} ({{experiencia.fechaExp}} - {{experiencia.fechaFinExp}}) </h4>
+                        <h2>{{Experiencia.tituloExp}}</h2> 
+                        <img src="{{Experiencia.imagenExp}}" style="float: right">
+                        <h4>{{Experiencia.subtituloExp}}</h4>
+                        <h4>({{Experiencia.fechaExp}} - {{Experiencia.fechaFinExp}})</h4>
                         </li>
-                        
                         <p>
-                            {{experiencia.descExp}}
+                            {{Experiencia.descExp}}
                         </p>
                     </ul>
             </div>

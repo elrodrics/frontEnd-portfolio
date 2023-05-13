@@ -2,6 +2,7 @@ import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/model/usuario';
 import { AboutmeService } from 'src/app/services/aboutme.service';
+import { UsuarioService } from 'src/app/services/usuario.service';
 
 @Component({
   selector: 'app-aboutme',
@@ -10,22 +11,21 @@ import { AboutmeService } from 'src/app/services/aboutme.service';
 })
 export class AboutmeComponent implements OnInit{
   public editUsuario: Usuario | undefined;
-  public usuario : Usuario | undefined;
+  usuario: Usuario = {} as Usuario;
+  public id: number = 1;
 
-  constructor(private aboutmeService : AboutmeService){ }
+  constructor(private aboutmeService : AboutmeService, public usuarioService: UsuarioService){ }
 
-  ngOnInit(): void{
-    this.getUser();
+  
+    ngOnInit(): void {
+    this.usuarioService.getUsuario(this.id).subscribe(data => {
+      this.usuario = data;
+    });
   }
 
-  public getUser():void{
-    this.aboutmeService.getUser().subscribe({
-      next:(Response: Usuario)=>{
-        this.usuario=Response;
-      },
-      error:(error: HttpErrorResponse)=>{
-        alert(error.message);
-      }
-    })
+  getUsuario(): void {
+    this.usuarioService.getUsuario(this.id).subscribe(data => {
+      this.usuario = data;
+    });
   }
 }

@@ -12,7 +12,7 @@ export class AboutmeService {
   constructor(private http: HttpClient){ }
 
   public getUser():Observable<Usuario>{
-     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/1`)
+     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/{id}`)
   }
 
   public updateUsuario(usuario: Usuario):Observable<Usuario>{

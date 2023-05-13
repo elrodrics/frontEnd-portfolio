@@ -2,24 +2,31 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/services/educacion.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-educacion',
   templateUrl: './educacion.component.html',
   styleUrls: ['./educacion.component.css']
 })
-export class EducacionComponent implements OnInit{
+export class EducacionComponent{
   public educaciones : Educacion[]=[];
-  public editEducacion: Educacion | undefined;
   
+  isLogged:boolean = false;
 
-  constructor(private educacionService : EducacionService){ }
+  constructor(private educacionService : EducacionService, private tokenService: TokenService){ }
+
 
   ngOnInit(): void{
-    this.getEducaciones();
+    this.getEducacion();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-  public getEducaciones():void{
+  public getEducacion():void{
     this.educacionService.getEducacion().subscribe({
       next:(Response: Educacion[])=>{
         this.educaciones=Response;
@@ -29,7 +36,16 @@ export class EducacionComponent implements OnInit{
       }
     })
   }
-  
 
+  delete(idEdu?: number){
+    if(idEdu != undefined){
+      this.educacionService.deleteEducacion(idEdu).subscribe(
+        data => {
+          this.getEducacion();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
+  }
 }
-

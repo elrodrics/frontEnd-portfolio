@@ -16,15 +16,20 @@ export class ExperienciaService {
   }
 
   public addExperiencia(experiencia: Experiencia):Observable<Experiencia>{
-    return this.http.post<Experiencia>(`${this.apiServerUrl}/experiencia/add`, experiencia);
+    return this.http.post<Experiencia>(`${this.apiServerUrl}/experiencia/create`, experiencia);
   }
 
-  public updateExperiencia(experiencia: Experiencia):Observable<Experiencia>{
-    return this.http.put<Experiencia>(`${this.apiServerUrl}/experiencia/update`, experiencia);
+  public getExperienciaId(idExp:number):Observable<Experiencia>{
+    return this.http.get<Experiencia>(`${this.apiServerUrl}/experiencia/detail/${idExp}`);
   }
-  
-  public deleteExperiencia(experienciaId: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/experiencia/delete/${experienciaId}`);
+
+  public updateExperiencia(idExp:number, experiencia: Experiencia):Observable<Experiencia>{
+    console.log("Experiencia enviada al servidor:", experiencia);
+    return this.http.put<Experiencia>(`${this.apiServerUrl}/experiencia/update/${idExp}`, experiencia);
+  }
+
+  public deleteExperiencia(idExp: number):Observable<void>{
+    return this.http.delete<void>(`${this.apiServerUrl}/experiencia/delete/${idExp}`);
   }
 
 }

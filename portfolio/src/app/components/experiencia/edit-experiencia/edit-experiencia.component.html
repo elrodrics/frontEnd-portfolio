@@ -1,0 +1,34 @@
+<div class="container" *ngIf="expLab">
+  <div class="row">
+      <div>
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+              <div class="form-group">
+                  <label for="tituloExp">Nombre de la empresa</label>
+                  <input type="text" class="form-control" id="tituloExp" name="tituloExp" [(ngModel)]="expLab.tituloExp" required>
+              </div>
+              <div class="form-group">
+                <label for="subtituloExp">Puesto de trabajo</label>
+                <input type="text" class="form-control" id="subtituloExp" name="subtituloExp" [(ngModel)]="expLab.subtituloExp" required>
+              </div>
+              <div class="form-group">
+                <label for="fechaExp">Fecha de inicio</label>
+                <input type="number" class="form-control" id="fechaExp" name="fechaExp" [(ngModel)]="expLab.fechaExp" required>
+                <label for="fechaExp">Fecha de finalizacion</label>
+                <input type="number" class="form-control" id="fechaFinExp" name="fechaFinExp" [(ngModel)]="expLab.fechaFinExp" required>
+              </div>
+              <div class="form-group">
+                  <label for="descExp">Breve descripcion</label>
+                  <input type="text" class="form-control" id="descExp" name="descExp" [(ngModel)]="expLab.descExp" required>
+              </div>
+              <div class="form-group">
+                <label for="imagenExp">Url de la imagen</label>
+                <input type="text" class="form-control" id="imagenExp" name="imagenExp" [(ngModel)]="expLab.imagenExp" required>
+            </div>
+              <button class="btn btn-primary" type="submit">
+                  Actualizar
+              </button>
+              <button class="btn btn-secondary" (click)="cancelar()">Cancelar</button>
+          </form>
+      </div>
+  </div>
+</div>

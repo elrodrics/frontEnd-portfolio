@@ -5,12 +5,14 @@
         data-placement="top"
         data-toggle="tooltip"
         data-original-title="Delete"
-        id="cruz" style="float: right"><i class="fa fa-times"></i></a>
+        id="cruz" style="float: right"
+        *ngIf="isLogged"><i class="fa fa-times"></i></a>
         <a class="btn btn-primary tooltips"
         data-placement="top"
         data-toggle="tooltip"
         data-original-title="Edit"
-        id="lapiz" style="float: right"><i class="fa fa-pencil"></i></a>
+        id="lapiz" style="float: right"
+        *ngIf="isLogged"><i class="fa fa-pencil"></i></a>
         
 
         <h1>Proyectos</h1>
