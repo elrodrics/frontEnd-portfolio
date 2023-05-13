@@ -17,7 +17,7 @@ label{
     height: 400px;
 }
 .col-md-3{
-    background: linear-gradient(to right, rgb(38, 5, 85), rgba(143, 30, 236, 0.838));
+    background: linear-gradient(to right, rgb(24, 16, 100),rgb(47, 2, 145));
     color:#fff;
     padding: 4%;
     border-top-left-radius: 0.5rem;
@@ -43,10 +43,11 @@ label{
     font-weight:600;
 }
 .contact-form button{
-    background: rgba(77, 16, 126, 0.838);
+    background: #2a0891;
     color: #fff;
     font-weight: 600;
     width: 25%;
+    
 }
 .contact-form button:focus{
     box-shadow:none;
@@ -79,10 +80,6 @@ label{
   background-color: #161103;
   color: #ffffff;
 }
-#actualizar{
-    padding-left: 150px;
-    padding-right: 150px;
-}
 #actualizar:active,
 #actualizar:focus{  
     background-color: #f09f25;
@@ -95,7 +92,10 @@ label{
   box-shadow: 0 8px 24px 0 rgba(227, 227, 227, 0.2);
   transform:scale(1.04);
 }
-
+#actualizar{
+    padding-right: 160px;
+    padding-left: 150px;
+}
 #cancelar{
     margin-left: 4%;
     background-color: #161103;
@@ -114,7 +114,11 @@ label{
     transform:scale(0.95);
 }
 
-h2{
+img{
+    border-radius: 100%;
+}
+
+h3{
     font-weight: bold;
 }
 
@@ -124,4 +128,3 @@ hr{
     background-color: rgb(255, 255, 255);
     margin: 20px auto;
 }
-

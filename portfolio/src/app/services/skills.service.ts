@@ -9,12 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class SkillsService {
 
-  URL = environment.apiBaseURL + 'skill/';
+  URL = environment.apiBaseURL + '/skill/';
   
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skill[]>{
-    return this.httpClient.get<Skill[]>(this.URL + 'lista');
+    return this.httpClient.get<Skill[]>(this.URL + 'all');
   }
 
   public detail(id: number): Observable<Skill>{

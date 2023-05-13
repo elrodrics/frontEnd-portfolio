@@ -1,19 +1,21 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
 
-    <section class="h-100 gradient-form">
+    <section class="h-100 gradient-form" *ngIf="expLab">
         <div class="container contact">
       <div class="row">
         <div class="col-md-3">
           <div class="contact-info">
             <img src="../../../assets/APLogo.png" alt="image"/>
-            <h2>Editar informacion</h2>
-                    <br>
+            <h2>Editar experiencia</h2>
+            <hr>
             <h5>¡Aquí puedes editar los datos que quieras!</h5>
+            <hr>
+            <img src="{{expLab.imagenExp}}">
           </div>
         </div>
         <div class="col-md-9">
-          <div class="contact-form" *ngIf="expLab">
+          <div class="contact-form" >
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                     <div class="form-group">
                       <label class="control-label col-sm-4" for="tituloExp">Nombre de la empresa</label>

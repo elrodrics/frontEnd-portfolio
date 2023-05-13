@@ -53,3 +53,28 @@ div{
     margin-left: 0%;
     justify-content: left;
 }
+
+#lapiz{  
+    background-color: #a000e0f4;
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-top: 5px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 9px;
+    padding-top: 8px;
+    border-color: #ffffff00;
+    box-shadow: 0 8px 24px 0 rgba(216, 130, 215, 0.336);
+}
+
+#lapiz:hover{  
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: #9706ad;
+    box-shadow: 0 8px 24px 0 rgba(255, 15, 247, 0.525);
+    transform:scale(0.95);
+}
+
+h1{
+    font-weight: bold;
+}

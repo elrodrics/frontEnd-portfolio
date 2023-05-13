@@ -1,4 +1,11 @@
 <div *ngIf="usuario" class="presentacion">
+    <a class="btn btn-primary tooltips"
+                    data-placement="top"
+                    data-toggle="tooltip"
+                    data-original-title="Edit"
+                    id="lapiz" style="float: right"
+                    *ngIf="isLogged"
+                    routerLink="/editaboutme/{{usuario.id}}"><i class="fa fa-pencil"></i></a>
     <div class="row">
         
         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">

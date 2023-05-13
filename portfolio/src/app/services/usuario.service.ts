@@ -15,4 +15,10 @@ export class UsuarioService {
   public getUsuario(id:number): Observable<Usuario>{
     return this.http.get<Usuario>(`${this.apiServerUrl}/usuario/id/${id}`);
   }
+  
+  public updateUsuario(id:number, usuario: Usuario):Observable<Usuario>{
+    console.log("Proyectos enviada al servidor:", usuario);
+    return this.http.put<Usuario>(`${this.apiServerUrl}/usuario/update/${id}`, usuario);
+  }
+  
 }

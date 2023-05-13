@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/services/educacion.service';
@@ -8,7 +8,7 @@ import { EducacionService } from 'src/app/services/educacion.service';
   templateUrl: './edit-educacion.component.html',
   styleUrls: ['./edit-educacion.component.css']
 })
-export class EditEducacionComponent {
+export class EditEducacionComponent implements OnInit{
 
   educa: Educacion = {} as Educacion;
 
@@ -36,7 +36,7 @@ export class EditEducacionComponent {
           this.router.navigate(['/home']);
         }, err =>{
            alert("Error al modificar experiencia");
-           this.router.navigate(['/home']);
+           this.router.navigate(['']);
         }
       )
     }

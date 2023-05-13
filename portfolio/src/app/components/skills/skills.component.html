@@ -1,20 +1,29 @@
 <div class="carta">
     <div class="skills">
+        <a class="btn btn-primary tooltips"
+                    data-placement="top"
+                    data-toggle="tooltip"
+                    data-original-title="Edit"
+                    id="plus" style="float: right"
+                    *ngIf="isLogged"
+                    routerLink="/nuevaskill"><i class="fa-solid fa-plus"></i></a>
         <h1>Hard & soft skills</h1>
         <div class="container">
-            <div class="row mb-2">
+            <div class="row mb-" >
 
-                <div class="col-auto">
+                <div class="col-auto" *ngFor="let skill of skill">
                     <circle-progress
-                    [percent]="50"
+                    [percent]="(skill.porcentaje)"
                     [backgroundColor]="'rgba(199, 90, 1, 0.25)'"
                     [radius]="55"
                     [showUnits]="false"
-                    [imageSrc]="'../assets/html.png'"
+                    [imageSrc]="(skill.imagenSkill)"
                     [showImage]="true"
                     [imageHeight]="80"
                     [imageWidth]="60"
                     [titleFontSize]="'3em'"
+                    [showTitle]="false" 
+                    [title]="(skill.nombre)"
                     [showSubtitle]="false"
                     [outerStrokeWidth]="10"
                     [innerStrokeWidth]="1"
@@ -30,186 +39,17 @@
                         data-toggle="tooltip"
                         data-original-title="Delete"
                         id="cruz" style="float: right"
-                        ><i class="fa fa-times"></i></a>
+                        *ngIf="isLogged"
+                        (click)="delete(skill.id)"><i class="fa fa-times"></i></a>
                     <a class="btn btn-primary tooltips"
                         data-placement="top"
                         data-toggle="tooltip"
                         data-original-title="Edit"
                         id="lapiz" style="float: right"
-                        ><i class="fa fa-pencil"></i></a>
+                        *ngIf="isLogged"
+                        routerLink="/editskills/{{skill.id}}"><i class="fa fa-pencil"></i></a>
                 </div>
 
-                <div class="col-auto">
-                    <circle-progress
-                        [percent]="50"
-                        [backgroundColor]="'rgba(199, 90, 1, 0.25)'"
-                        [radius]="55"
-                        [showUnits]="false"
-                        [imageSrc]="'../assets/js.png'"
-                        [showImage]="true"
-                        [imageHeight]="80"
-                        [imageWidth]="60"
-                        [titleFontSize]="'3em'"
-                        [showSubtitle]="false"
-                        [outerStrokeWidth]="10"
-                        [innerStrokeWidth]="1"
-                        [outerStrokeColor]="'red'"
-                        [innerStrokeColor]="'rgba(100, 0, 0, 0.1)'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        ></circle-progress>
-        
-                        <a class="btn btn-secondary tooltips"
-                        data-placement="top"
-                        data-toggle="tooltip"
-                        data-original-title="Delete"
-                        id="cruz" style="float: right"
-                        ><i class="fa fa-times"></i></a>
-                        <a class="btn btn-primary tooltips"
-                        data-placement="top"
-                        data-toggle="tooltip"
-                        data-original-title="Edit"
-                        id="lapiz" style="float: right"
-                        ><i class="fa fa-pencil"></i></a>
-                </div>
-
-                <div class="col-auto">
-                    <circle-progress
-                        [percent]="50"
-                        [backgroundColor]="'rgba(199, 90, 1, 0.25)'"
-                        [radius]="55"
-                        [showUnits]="false"
-                        [imageSrc]="'../assets/css.png'"
-                        [showImage]="true"
-                        [imageHeight]="80"
-                        [imageWidth]="60"
-                        [titleFontSize]="'3em'"
-                        [showSubtitle]="false"
-                        [outerStrokeWidth]="10"
-                        [innerStrokeWidth]="1"
-                        [outerStrokeColor]="'red'"
-                        [innerStrokeColor]="'rgba(100, 0, 0, 0.1)'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        
-                    ></circle-progress>
-
-                    <a class="btn btn-secondary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Delete"
-                    id="cruz" style="float: right"
-                    ><i class="fa fa-times"></i></a>
-                    <a class="btn btn-primary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Edit"
-                    id="lapiz" style="float: right"
-                    ><i class="fa fa-pencil"></i></a>
-                </div>
-
-                <div class="col-auto">
-                    <circle-progress
-                        [percent]="50"
-                        [backgroundColor]="'rgba(199, 90, 1, 0.25)'"
-                        [radius]="55"
-                        [showUnits]="false"
-                        [imageSrc]="'../assets/word.png'"
-                        [showImage]="true"
-                        [imageHeight]="80"
-                        [imageWidth]="60"
-                        [titleFontSize]="'3em'"
-                        [showSubtitle]="false"
-                        [outerStrokeWidth]="10"
-                        [innerStrokeWidth]="1"
-                        [outerStrokeColor]="'red'"
-                        [innerStrokeColor]="'rgba(100, 0, 0, 0.1)'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                        
-                    ></circle-progress>
-        
-                    <a class="btn btn-secondary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Delete"
-                    id="cruz" style="float: right"
-                    ><i class="fa fa-times"></i></a>
-                    <a class="btn btn-primary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Edit"
-                    id="lapiz" style="float: right"
-                    ><i class="fa fa-pencil"></i></a>
-                </div>
-
-                <div class="col-auto">
-                    <circle-progress
-                        [percent]="50"
-                        [backgroundColor]="'rgba(199, 90, 1, 0.25)'"
-                        [radius]="55"
-                        [showUnits]="false"
-                        [imageSrc]="'../assets/excel.png'"
-                        [showImage]="true"
-                        [imageHeight]="80"
-                        [imageWidth]="60"
-                        [titleFontSize]="'3em'"
-                        [showSubtitle]="false"
-                        [outerStrokeWidth]="10"
-                        [innerStrokeWidth]="1"
-                        [outerStrokeColor]="'red'"
-                        [innerStrokeColor]="'rgba(100, 0, 0, 0.1)'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                    ></circle-progress>
-    
-                    <a class="btn btn-secondary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Delete"
-                    id="cruz" style="float: right"
-                    ><i class="fa fa-times"></i></a>
-                    <a class="btn btn-primary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Edit"
-                    id="lapiz" style="float: right"
-                    ><i class="fa fa-pencil"></i></a>
-                </div>
-
-                <div class="col-auto">
-                    <circle-progress
-                        [percent]="50"
-                        [backgroundColor]="'rgba(199, 90, 1, 0.25)'"
-                        [radius]="55"
-                        [showUnits]="false"
-                        [imageSrc]="'../assets/adobeps.png'"
-                        [showImage]="true"
-                        [imageHeight]="60"
-                        [imageWidth]="50"
-                        [titleFontSize]="'3em'"
-                        [showSubtitle]="false"
-                        [outerStrokeWidth]="10"
-                        [innerStrokeWidth]="1"
-                        [outerStrokeColor]="'red'"
-                        [innerStrokeColor]="'rgba(100, 0, 0, 0.1)'"
-                        [animation]="true"
-                        [animationDuration]="300"
-                    ></circle-progress>
-    
-                    <a class="btn btn-secondary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Delete"
-                    id="cruz" style="float: right"
-                    ><i class="fa fa-times"></i></a>
-                    <a class="btn btn-primary tooltips"
-                    data-placement="top"
-                    data-toggle="tooltip"
-                    data-original-title="Edit"
-                    id="lapiz" style="float: right"
-                    ><i class="fa fa-pencil"></i></a>
-                </div>
 
             </div>
         </div>

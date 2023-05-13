@@ -44,6 +44,14 @@ p{
     margin-top: 5px;
     padding: 14px;
 }
+
+#plus{
+    background-color: #d9990fd2;
+    margin-left: 9px;
+    margin-top: 5px;
+    padding: 14px;
+}
+
 .btn{
     border-radius: 4px;
     height: 44px;
@@ -82,4 +90,13 @@ p{
   color: #c41515;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
   transform:scale(1.04);
+}
+#plus:hover{
+    background-color: #ffffff;
+    color: #ba9d0ad1;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+    transform:scale(1.04);
+}
+h1{
+    font-weight: bold;
 }

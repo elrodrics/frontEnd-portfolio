@@ -17,7 +17,7 @@ label{
     height: 400px;
 }
 .col-md-3{
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(61, 0, 168));
+    background: linear-gradient(to right, rgb(38, 5, 85), rgba(143, 30, 236, 0.838));
     color:#fff;
     padding: 4%;
     border-top-left-radius: 0.5rem;
@@ -43,7 +43,7 @@ label{
     font-weight:600;
 }
 .contact-form button{
-    background: #2a0891;
+    background: rgba(77, 16, 126, 0.838);
     color: #fff;
     font-weight: 600;
     width: 25%;

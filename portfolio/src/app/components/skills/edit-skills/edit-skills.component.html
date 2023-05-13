@@ -1,19 +1,52 @@
-<div class="container" *ngIf="skill">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombre">Nombre de la Skill</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="skill.nombre" required>
-                </div>
-                <div class="form-group">
-                    <label for="porcentaje">Ingrese el porcentaje</label>
-                    <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
-                </div>
-                <button class="btn btn-primary">
-                    Actualizar
-                </button>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
+<section class="h-100 gradient-form" *ngIf="skill">
+    <div class="container contact">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="contact-info">
+				<img src="../../../assets/APLogo.png" alt="image"/>
+				<h2>Editar skills</h2>
+        <hr>
+				<h5>¡Aquí puedes editar las skills que quieras!</h5>
+        <hr>
+        <img src="{{skill.imagenSkill}}">
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="contact-form" >
+				<form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                    <div class="form-group">
+                      <label class="control-label col-sm-4" for="nombre">Nombre de la skill</label>
+                      <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="nombre" placeholder="Ejemplo: HTML" name="nombre" [(ngModel)]="skill.nombre" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-sm-5" for="porcentaje">Porcentaje</label>
+                      <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="porcentaje" placeholder="Ejemplo: 75" name="porcentaje" [(ngModel)]="skill.porcentaje" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-4" for="imagenSkill">URL de la imagen:</label>
+                        <div class="col-sm-10">
+                          <textarea class="form-control" rows="15" id="imagenSkill" placeholder="Ejemplo: http://www.google/dd898349583.jpg" name="imagenSkill" [(ngModel)]="skill.imagenSkill" required></textarea>
+                        </div>
+                      </div>
+            
+                    <div class="form-group">        
+                        <div class="col-sm-offset-2 col-sm-10">
+                          <button type="submit" class="btn btn-default" id="actualizar">Actualizar skill</button>
+                          <button type="submit" class="btn btn-default" id="cancelar" (click)="cancelar()">Cancelar</button>
+                        </div>
+                      </div>
             </form>
-        </div>
-    </div>
+                
+			</div>
+		</div>
+	</div>
 </div>
+
+</section>
