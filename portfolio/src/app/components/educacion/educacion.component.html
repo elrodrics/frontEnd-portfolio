@@ -1,5 +1,12 @@
 <div class="carta">
     <div class="educacion" >
+      <a class="btn btn-primary tooltips"
+        data-placement="top"
+        data-toggle="tooltip"
+        data-original-title="Edit"
+        id="plus" style="float: right"
+        *ngIf="isLogged"
+        routerLink="/nuevaedu"><i class="fa-solid fa-plus"></i></a>
       <h1>Educación</h1>
 
       <div *ngFor="let Educacion of educaciones">
@@ -19,16 +26,8 @@
         *ngIf="isLogged"
         routerLink="/editedu/{{Educacion.idEdu}}"><i class="fa fa-pencil"></i></a>
 
-        <a class="btn btn-primary tooltips"
-        data-placement="top"
-        data-toggle="tooltip"
-        data-original-title="Edit"
-        id="plus" style="float: right"
-        *ngIf="isLogged"
-        routerLink="/nuevaedu"><i class="fa-solid fa-plus"></i></a>
-
+  
             <ul>
-                
                 <li>
                   <h2>{{Educacion.tituloEdu}}</h2> 
                   <img src="{{Educacion.imagenEdu}}" id="escuela" style="float: right">

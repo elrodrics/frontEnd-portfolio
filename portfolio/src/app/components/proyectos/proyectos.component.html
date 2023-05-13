@@ -1,29 +1,39 @@
 <div class="carta">
     <div class="proyectos">
-
-        <a class="btn btn-secondary tooltips"
-        data-placement="top"
-        data-toggle="tooltip"
-        data-original-title="Delete"
-        id="cruz" style="float: right"
-        *ngIf="isLogged"><i class="fa fa-times"></i></a>
         <a class="btn btn-primary tooltips"
         data-placement="top"
         data-toggle="tooltip"
         data-original-title="Edit"
-        id="lapiz" style="float: right"
-        *ngIf="isLogged"><i class="fa fa-pencil"></i></a>
+        id="plus" style="float: right"
+        *ngIf="isLogged"
+        routerLink="/nuevoproye"><i class="fa-solid fa-plus"></i></a>
         
-
         <h1>Proyectos</h1>
-        <div *ngFor="let proyectos of proyectos" >
+        <div *ngFor="let Proyectos of proyectos">
+
+            <a class="btn btn-secondary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Delete"
+            id="cruz" style="float: right"
+            *ngIf="isLogged"
+            (click)="delete(Proyectos.idProye)"><i class="fa fa-times"></i></a>
+            <a class="btn btn-primary tooltips"
+            data-placement="top"
+            data-toggle="tooltip"
+            data-original-title="Edit"
+            id="lapiz" style="float: right"
+            *ngIf="isLogged"
+            routerLink="/editproye/{{Proyectos.idProye}}"><i class="fa fa-pencil"></i></a>
+
             <ul>
                 <li>
-                <h2>{{proyectos.tituloProye}}</h2> <h4>{{proyectos.subtituloProye}} ({{proyectos.fechaProye}} - {{proyectos.fechaFinProye}}) </h4>
+                <h2>{{Proyectos.tituloProye}}</h2> 
+                <h4>{{Proyectos.subtituloProye}}</h4>
+                <h4>{{Proyectos.fechaProye}}</h4>
                 </li>
-
                 <p>
-                    {{proyectos.descProye}}
+                    {{Proyectos.descProye}}
                 </p>
             </ul>
         </div>

@@ -12,8 +12,8 @@ export class NewEducacionComponent{
    // Creamos las variables que contendrán los datos del formulario
    tituloEdu: string = '';
    subtituloEdu: string = '';
-   fechaEdu: number = 0;
-   fechaFinEdu: number = 0;
+   fechaEdu: Date = new Date;
+   fechaFinEdu: Date = new Date;
    descEdu: string = '';
    imagenEdu: string = '';
  
@@ -23,7 +23,7 @@ export class NewEducacionComponent{
      const expe = new Educacion(this.tituloEdu, this.subtituloEdu, this.fechaEdu, this.fechaFinEdu, this.descEdu, this.imagenEdu);
      this.educacionService.addEducacion(expe).subscribe(
        data => {
-         alert("Experiencia añadida");
+         alert("Educacion añadida");
          this.router.navigate(['/home']);
        }, err => {
          alert("Falló");
@@ -31,4 +31,8 @@ export class NewEducacionComponent{
        }
      )
    }
+
+   cancelar(): void{
+    this.router.navigate(['/home']);
+  }
  }

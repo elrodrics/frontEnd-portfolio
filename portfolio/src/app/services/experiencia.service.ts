@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Experiencia } from '../model/experiencia';
-import { Observable } from 'rxjs';
+import { Observable, catchError, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -28,8 +28,13 @@ export class ExperienciaService {
     return this.http.put<Experiencia>(`${this.apiServerUrl}/experiencia/update/${idExp}`, experiencia);
   }
 
-  public deleteExperiencia(idExp: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/experiencia/delete/${idExp}`);
+  public deleteExperiencia(idExp: number): Observable<any> {
+    return this.http.delete(`${this.apiServerUrl}/experiencia/delete/${idExp}`).pipe(
+      catchError(error => {
+        console.log('Error eliminando experiencia:', error);
+        return throwError('Ha ocurrido un error al eliminar la experiencia.');
+      })
+    );
   }
 
 }

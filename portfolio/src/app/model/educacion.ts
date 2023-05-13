@@ -2,12 +2,12 @@ export class Educacion{
     idEdu?:number;
     tituloEdu:String;
     subtituloEdu:String;
-    fechaEdu:number;
-    fechaFinEdu:number;
+    fechaEdu:Date;
+    fechaFinEdu:Date;
     descEdu:String;
     imagenEdu:String;
 
-    constructor(tituloEdu: string, subtituloEdu: string, fechaEdu: number, fechaFinEdu: number, descEdu: string, imagenEdu: string) {
+    constructor(tituloEdu: string, subtituloEdu: string, fechaEdu: Date, fechaFinEdu: Date, descEdu: string, imagenEdu: string) {
         this.tituloEdu = tituloEdu;
         this.subtituloEdu = subtituloEdu;
         this.fechaEdu = fechaEdu;

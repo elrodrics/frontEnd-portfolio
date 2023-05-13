@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+body{
+    background-color: #e8e8e8;
+}
+
+img{
+    width: 150px;
+}
+
+
+label{
+    color: #e8e8e8;
+}
+
+.contact{
+    padding: 4%;
+    height: 400px;
+}
+.col-md-3{
+    background: linear-gradient(to right, rgb(0, 0, 0), rgba(144, 9, 255, 0.838));
+    color:#fff;
+    padding: 4%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    
+}
+.contact-info{
+    margin-top:10%;
+}
+.contact-info img{
+    margin-bottom: 15%;
+}
+.contact-info h2{
+    margin-bottom: 10%;
+}
+.col-md-9{
+    background: rgba(17, 10, 1, 0.935);
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.contact-form label{
+    font-weight:600;
+}
+.contact-form button{
+    background: rgba(77, 16, 126, 0.838);
+    color: #fff;
+    font-weight: 600;
+    width: 25%;
+}
+.contact-form button:focus{
+    box-shadow:none;
+}
+
+.btn{  
+  border-radius: 4px;
+  height: 44px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-transition : all 200ms linear;
+  transition: all 200ms linear;
+  padding: 0 30px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #161103;
+  color: #ffffff;
+}
+#actualizar{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+#actualizar:active,
+#actualizar:focus{  
+    background-color: #f09f25;
+  color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+#actualizar:hover{  
+  background-color: #a21beb9b;
+  color: #ffffff;
+  box-shadow: 0 8px 24px 0 rgba(227, 227, 227, 0.2);
+  transform:scale(1.04);
+}
+
+#cancelar{
+    margin-left: 4%;
+    background-color: #161103;
+}
+#cancelar:active,
+#cancelar:focus{  
+    background-color: #f09f25;
+    color: #ffeba7;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+
+#cancelar:hover{
+    background-color: #ffffff12;
+    color: #ffffff;
+    box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+    transform:scale(0.95);
+}
+

@@ -11,11 +11,11 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class ProyectosComponent {
   public proyectos : Proyectos[]=[];
-  public editProyectos: Proyectos | undefined;
   
   isLogged:boolean = false;
 
   constructor(private proyectosService : ProyectosService, private tokenService: TokenService){ }
+
 
   ngOnInit(): void{
     this.getProyectos();
@@ -36,7 +36,18 @@ export class ProyectosComponent {
       }
     })
   }
-  
+
+  delete(idProye?: number){
+    if(idProye != undefined){
+      this.proyectosService.deleteProyectos(idProye).subscribe(
+        data => {
+          this.getProyectos();
+        }, err => {
+          alert("No se pudo borrar la experiencia");
+        }
+      )
+    }
+  }
 
 }
 

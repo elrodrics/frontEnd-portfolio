@@ -12,18 +12,18 @@ export class NewExperienciaComponent {
   // Creamos las variables que contendrán los datos del formulario
   tituloExp: string = '';
   subtituloExp: string = '';
-  fechaExp: number = 0;
-  fechaFinExp: number= 0;
+  fechaExp: Date = new Date;
+  fechaFinExp: Date = new Date;
   descExp: string = '';
   imagenExp: string = '';
 
-  constructor(private experienciaService: ExperienciaService, private router: Router) { }
+  constructor(private experienciaervice: ExperienciaService, private router: Router) { }
 
   onCreate(): void {
     const expe = new Experiencia(this.tituloExp, this.subtituloExp, this.fechaExp, this.fechaFinExp, this.descExp, this.imagenExp);
-    this.experienciaService.addExperiencia(expe).subscribe(
+    this.experienciaervice.addExperiencia(expe).subscribe(
       data => {
-        alert("Experiencia añadida");
+        alert("Educacion añadida");
         this.router.navigate(['/home']);
       }, err => {
         alert("Falló");
@@ -31,4 +31,8 @@ export class NewExperienciaComponent {
       }
     )
   }
+
+  cancelar(): void{
+   this.router.navigate(['/home']);
+ }
 }

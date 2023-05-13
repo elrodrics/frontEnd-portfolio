@@ -16,15 +16,20 @@ export class ProyectosService {
   }
 
   public addProyectos(proyectos: Proyectos):Observable<Proyectos>{
-    return this.http.post<Proyectos>(`${this.apiServerUrl}/proyectos/add`, proyectos);
+    return this.http.post<Proyectos>(`${this.apiServerUrl}/proyectos/create`, proyectos);
   }
 
-  public updateProyectos(proyectos: Proyectos):Observable<Proyectos>{
-    return this.http.put<Proyectos>(`${this.apiServerUrl}/proyectos/update`, proyectos);
+  public getProyectosId(idProye:number):Observable<Proyectos>{
+    return this.http.get<Proyectos>(`${this.apiServerUrl}/proyectos/detail/${idProye}`);
   }
-  
-  public deleteProyectos(proyectosId: number):Observable<void>{
-    return this.http.delete<void>(`${this.apiServerUrl}/proyectos/delete/${proyectosId}`);
+
+  public updateProyectos(idEdu:number, proyectos: Proyectos):Observable<Proyectos>{
+    console.log("Proyectos enviada al servidor:", proyectos);
+    return this.http.put<Proyectos>(`${this.apiServerUrl}/proyectos/update/${idEdu}`, proyectos);
   }
-  
+
+  public deleteProyectos(idEdu: number):Observable<void>{
+    return this.http.delete<void>(`${this.apiServerUrl}/proyectos/delete/${idEdu}`);
+  }
+
 }
