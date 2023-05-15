@@ -12,8 +12,8 @@ export class NewEducacionComponent{
    // Creamos las variables que contendrán los datos del formulario
    tituloEdu: string = '';
    subtituloEdu: string = '';
-   fechaEdu: string = '';
-   fechaFinEdu: string = '';
+   fechaEdu: Date = new Date;
+   fechaFinEdu: Date = new Date;
    descEdu: string = '';
    imagenEdu: string = '';
  
