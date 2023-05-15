@@ -32,7 +32,7 @@
                   <h2>{{Educacion.tituloEdu}}</h2> 
                   <img src="{{Educacion.imagenEdu}}" id="escuela" style="float: right">
                   <h4>{{Educacion.subtituloEdu}} </h4>
-                  <h4>({{Educacion.fechaEdu}} - {{Educacion.fechaFinEdu}}) </h4>
+                  <h4>({{Educacion.fechaEdu | date:"dd-MM-yyyy"}} - {{Educacion.fechaFinEdu | date:"dd-MM-yyyy"}}) </h4>
                   <p>
                     {{Educacion.descEdu}}
                   </p>
